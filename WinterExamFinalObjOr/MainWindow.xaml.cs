@@ -10,7 +10,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static WinterExamFinalObjOr.Event;
-
+/*
+ * 
+ * 
+ * 
+ */
 namespace WinterExamFinalObjOr
 {
     /// <summary>
@@ -20,6 +24,7 @@ namespace WinterExamFinalObjOr
     {
         List<Event> events = new List<Event>();
         List<Ticket> tickets = new List<Ticket>();  
+        List<Event> filterEvents = new List<Event>();
         public MainWindow()
         {
             InitializeComponent();
@@ -106,6 +111,25 @@ namespace WinterExamFinalObjOr
                 {
                     MessageBox.Show("Invalid ticket number, please enter a number");
                 }
+            }
+
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            filterEvents.Clear();
+            if (tbxSearch.Text != null)
+            {
+                for (int i = 0; i < events.Count; i++)
+                {
+
+                    if (tbxSearch.Text.ToLower() == events[i].Name.ToLower())
+                    {
+                        filterEvents.Add(events[i]);
+
+                    }
+                }
+                lbxEvents.ItemsSource = filterEvents;
             }
 
         }

@@ -10,11 +10,12 @@
         <ListBox x:Name="lbxEvents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="45,96,427,95"/>
         <ListBox x:Name="lbxTickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,96,26,95"/>
         <Label Content="Events" HorizontalAlignment="Left" Margin="45,65,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="161,69,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="161,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Tickets" HorizontalAlignment="Left" Margin="458,65,0,0" VerticalAlignment="Top"/>
         <Label Content="Number of Tickets" HorizontalAlignment="Left" Margin="458,359,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnBook" Content="Book" HorizontalAlignment="Left" Margin="706,359,0,0" VerticalAlignment="Top" Click="btnBook_Click"/>
         <TextBox x:Name="tbxNumberOfTickets" HorizontalAlignment="Left" Margin="570,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="308,67,0,0" VerticalAlignment="Top" Click="btnSearch_Click"/>
 
     </Grid>
 </Window>
