@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ListBox x:Name="lbxEvents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="45,96,468,95"/>
+        <ListBox x:Name="lbxTickects" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="458,96,54,95"/>
+        <Label Content="Events" HorizontalAlignment="Left" Margin="45,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="161,69,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Tickets" HorizontalAlignment="Left" Margin="458,65,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of Tickets" HorizontalAlignment="Left" Margin="458,359,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkNumbOfTickets" HorizontalAlignment="Left" Margin="602,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"/>
+        <Button x:Name="btnBook" Content="Book" HorizontalAlignment="Left" Margin="706,359,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

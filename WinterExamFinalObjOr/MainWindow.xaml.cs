@@ -22,9 +22,6 @@ namespace WinterExamFinalObjOr
             InitializeComponent();
             
         }
-        public void TestGit()
-        {
 
-        }
     }
 }
