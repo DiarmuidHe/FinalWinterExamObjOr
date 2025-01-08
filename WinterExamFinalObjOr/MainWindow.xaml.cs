@@ -16,10 +16,15 @@ namespace WinterExamFinalObjOr
     /// </summary>
     public partial class MainWindow : Window
     {
-        //testing push
+        //testing push2
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+        public void TestGit()
+        {
+
         }
     }
 }
