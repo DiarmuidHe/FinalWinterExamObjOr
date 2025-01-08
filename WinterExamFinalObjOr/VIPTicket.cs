@@ -10,5 +10,10 @@ namespace WinterExamFinalObjOr
     {
         public string AdditionalExtras { get; set; }
         public decimal AdditionalCost { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} - {(Price + AdditionalCost).ToString("c")}({AdditionalExtras})[AVAILABLE - {AvailableTickets}]";
+        }
     }
 }

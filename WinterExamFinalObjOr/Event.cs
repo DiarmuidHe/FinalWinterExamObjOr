@@ -12,7 +12,7 @@ namespace WinterExamFinalObjOr
         public DateTime EventDate { get; set; }
         public List<Ticket> Tickets { get; set; }
         public enum TypeOfEvent {Music,Comedy,Theatre}
-        public TypeOfEvent EventType { get; set; };
+        public TypeOfEvent EventType { get; set; }
         
         public int CompareTo(Event other)
         {

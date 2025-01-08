@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Principal;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,7 +18,8 @@ namespace WinterExamFinalObjOr
     /// </summary>
     public partial class MainWindow : Window
     {
-        //testing push2
+        List<Event> events = new List<Event>();
+        List<Ticket> tickets = new List<Ticket>();  
         public MainWindow()
         {
             InitializeComponent();
@@ -67,6 +69,44 @@ namespace WinterExamFinalObjOr
                 AdditionalExtras = "with camping",
                 AvailableTickets = 100
             };
+            events.Add(e2);
+            events.Add(e1);
+            
+
+            events.Sort();
+            lbxEvents.ItemsSource = events;
+
+            tickets.Add(t1);
+            tickets.Add(t2);
+            tickets.Add(vip1);
+            tickets.Add(vip2);
+            lbxTickets.ItemsSource = tickets;
+
+        }
+
+        private void btnBook_Click(object sender, RoutedEventArgs e)
+        {
+
+            Ticket selected = lbxTickets.SelectedItem as Ticket;
+            
+            if (selected != null)
+            {
+                if (int.TryParse(tbxNumberOfTickets.Text, out int amountWanted))
+                {
+                    tickets.Remove(selected);
+                    if (!selected.CheckIfTicketsAvailable(amountWanted))
+                    {
+                        MessageBox.Show("Invalid ticket ticket amount, please enter a different ticket amount");
+
+                    }
+                    tickets.Add(selected);
+                    lbxTickets.ItemsSource = tickets;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ticket number, please enter a number");
+                }
+            }
 
         }
     }
